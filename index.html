@@ -1,0 +1,21 @@
+<html>
+  <body>
+    Filename: <input id="filename" type="text" style="font-size: 100;"> <br/> <br/>
+    Code: <input id="uri" type="text" style="font-size: 100;">
+    <a id="donwloadlink" href="" download="" style="font-size: 100;">download file</a>
+    <script>
+      setTimeout(() => {
+        Update();
+      }, 1);
+
+      function Update() {
+        document.getElementById("donwloadlink").setAttribute("download", document.getElementById("filename").value);
+        document.getElementById("donwloadlink").href = document.getElementById("uri").value;
+
+        setTimeout(() => {
+          Update();
+        }, 1);
+      }
+    </script>
+  </body>
+</html>
